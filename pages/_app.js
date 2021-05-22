@@ -1,6 +1,7 @@
 // import { ThemeProvider } from "theme-ui";
 // import { customTheme } from "../theme";
-import { Header, MDXCompProvider } from "../src/components";
+
+import { Footer, Header, MDXCompProvider } from "../src/components";
 import "tailwindcss/tailwind.css";
 
 function MyApp({ Component, pageProps }) {
@@ -8,6 +9,7 @@ function MyApp({ Component, pageProps }) {
     <MDXCompProvider>
       <Header />
       <Component {...pageProps} />
+      <Footer />
     </MDXCompProvider>
   );
 }
