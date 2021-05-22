@@ -1,15 +1,11 @@
-/** @jsxImportSource theme-ui */
-
 import Head from "next/head";
 import { getAllPostSlugs, getPostdata } from "../../src/lib/posts";
-import { Box, Text } from "theme-ui";
 import matter from "gray-matter";
-import MyBackground from "../../src/components/MyBackground";
-import MyButton from "../../src/components/MyButton";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
+import { Container, Header } from "../../src/components";
 
-const components = { MyBackground, MyButton };
+const components = { Container, Header };
 
 export default function Posts({ source, frontMatter }) {
   return (
@@ -17,26 +13,21 @@ export default function Posts({ source, frontMatter }) {
       <Head>
         <title>{frontMatter.title}</title>
       </Head>
-      <Box sx={{ variant: "containers.page" }}>
-        <Box sx={{ mt: "4rem", textAlign: "center" }}>
+      <div>
+        <div>
           <h1>{frontMatter.title}</h1>
-          <Text
-            sx={{
-              width: ["80%", "50%"],
-              mx: "auto",
-            }}
-          >
+          <span>
             {frontMatter.author}
             {" / "}
             <span>{frontMatter.date}</span>
-          </Text>
-        </Box>
-        <Box sx={{ mt: "4rem" }}>
-          <Box>
+          </span>
+        </div>
+        <div sx={{ mt: "4rem" }}>
+          <div>
             <MDXRemote {...source} components={components} />
-          </Box>
-        </Box>
-      </Box>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
