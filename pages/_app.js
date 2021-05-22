@@ -1,14 +1,14 @@
-import "../styles/globals.css";
 import { ThemeProvider } from "theme-ui";
 import { customTheme } from "../theme";
-import { MDXProvider } from "@mdx-js/react";
+import { Header, MDXCompProvider } from "../src/components";
 
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={customTheme}>
-      <MDXProvider>
+      <MDXCompProvider>
+        <Header />
         <Component {...pageProps} />
-      </MDXProvider>
+      </MDXCompProvider>
     </ThemeProvider>
   );
 }

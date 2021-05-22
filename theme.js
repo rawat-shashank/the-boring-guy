@@ -1,7 +1,7 @@
-import { roboto } from "@theme-ui/presets";
+import { roboto, deep } from "@theme-ui/presets";
 
 export const customTheme = {
-  ...roboto,
+  ...deep,
   containers: {
     page: {
       width: "98%",
