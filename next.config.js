@@ -1,4 +1,4 @@
-const withMDX = require("@next/mdx")();
-module.exports = withMDX({
-  pageExtensions: ["js", "mdx"],
-});
+module.exports = {
+  assetPrefix: "/the-boring-guy/",
+  basePath: "/the-boring-guy",
+};
