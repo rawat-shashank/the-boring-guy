@@ -1,5 +1,5 @@
 import { sitemetaData } from "../config";
-import SocialIcon from "../src/components/social-icons";
+import { SocialIcon } from "../src/components";
 
 export default function About() {
   return (
@@ -25,17 +25,12 @@ export default function About() {
                   {sitemetaData.title} - Developer/Human
                 </p>
                 <span className="inline-flex mt-4 sm:mt-2 justify-center sm:justify-start">
-                  <SocialIcon kind="mail" href={sitemetaData.email} size="5" />
                   <SocialIcon
-                    kind="linkedin"
-                    href={sitemetaData.linkedin}
-                    size="5"
+                    kind="mail"
+                    href={`mailto:${sitemetaData.email}`}
                   />
-                  <SocialIcon
-                    kind="github"
-                    href={sitemetaData.github}
-                    size="5"
-                  />
+                  <SocialIcon kind="linkedin" href={sitemetaData.linkedin} />
+                  <SocialIcon kind="github" href={sitemetaData.github} />
                 </span>
               </div>
             </div>

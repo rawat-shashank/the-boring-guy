@@ -8,20 +8,20 @@ const components = {
   linkedin: LinkedinIcon,
 };
 
-const SocialIcon = ({ kind, href, size = 8 }) => {
+const SocialIcon = ({ kind, href }) => {
   if (!href) return null;
 
   const SocialSvg = components[kind];
 
   return (
     <a
-      className="ml-3 text-sm text-gray-500 transition hover:text-gray-700"
+      className="ml-3 text-gray-500 transition hover:text-gray-700"
       target="_blank"
       rel="noopener noreferrer"
       href={href}
     >
       <span className="sr-only">{kind}</span>
-      <SocialSvg svgClass={`fill-current h-${size} w-${size}`} />
+      <SocialSvg svgClass="fill-current max-h-5 max-w-5" />
     </a>
   );
 };

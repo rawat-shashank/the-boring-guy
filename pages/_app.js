@@ -1,8 +1,6 @@
-// import { ThemeProvider } from "theme-ui";
-// import { customTheme } from "../theme";
-
-import { Footer, Header, MDXCompProvider } from "../src/components";
 import "tailwindcss/tailwind.css";
+
+import { Footer, Header } from "../src/components";
 
 function MyApp({ Component, pageProps }) {
   return (

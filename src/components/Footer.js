@@ -1,4 +1,4 @@
-import SocialIcon from "./social-icons";
+import { SocialIcon } from ".";
 import { sitemetaData } from "../../config";
 
 export const Footer = () => {
@@ -24,9 +24,9 @@ export const Footer = () => {
           © {new Date().getFullYear()}
         </p>
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-          <SocialIcon kind="mail" href={sitemetaData.email} size="5" />
-          <SocialIcon kind="linkedin" href={sitemetaData.linkedin} size="5" />
-          <SocialIcon kind="github" href={sitemetaData.github} size="5" />
+          <SocialIcon kind="mail" href={`mailto:${sitemetaData.email}`} />
+          <SocialIcon kind="linkedin" href={sitemetaData.linkedin} />
+          <SocialIcon kind="github" href={sitemetaData.github} />
         </span>
       </div>
     </footer>
