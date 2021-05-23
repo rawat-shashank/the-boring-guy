@@ -1,5 +1,5 @@
 import { Container } from "./Container";
-import { Header } from "./Header";
+import { Header } from "./header/Header";
 import { Footer } from "./Footer";
 import { MDXCompProvider } from "./MDXProvider";
 import { BlogPost } from "./Blogpost";
