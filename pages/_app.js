@@ -6,11 +6,13 @@ import "tailwindcss/tailwind.css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <MDXCompProvider>
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <Component {...pageProps} />
+      <main className="flex-grow">
+        <Component {...pageProps} />
+      </main>
       <Footer />
-    </MDXCompProvider>
+    </div>
   );
 }
 
