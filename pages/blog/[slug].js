@@ -14,7 +14,7 @@ export default function Posts({ source, frontMatter }) {
         <title>{frontMatter.title}</title>
       </Head>
       <Container>
-        <div className="prose">
+        <div className="flex flex-col content-center">
           <header className="pt-6 xl:pb-6">
             <div className="space-y-1 text-center">
               <dl className="space-y-10">
@@ -33,10 +33,8 @@ export default function Posts({ source, frontMatter }) {
             </div>
           </header>
 
-          <div sx={{ mt: "4rem" }}>
-            <div>
-              <MDXRemote {...source} components={components} />
-            </div>
+          <div className="prose max-w-xs sm:max-w-2xl lg:max-w-4xl lg:prose-xl xl:max-w-5xl xl:prose-2xl">
+            <MDXRemote {...source} components={components} />
           </div>
         </div>
       </Container>
