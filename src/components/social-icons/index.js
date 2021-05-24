@@ -21,7 +21,7 @@ const SocialIcon = ({ kind, href }) => {
       href={href}
     >
       <span className="sr-only">{kind}</span>
-      <SocialSvg svgClass="fill-current max-h-5 max-w-5" />
+      <SocialSvg svgClass="fill-current h-5 w-5 max-h-5 max-w-5" />
     </a>
   );
 };
