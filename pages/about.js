@@ -1,13 +1,11 @@
 import { sitemetaData } from "../config";
-import { Container, SocialIcon } from "../src/components";
+import { Container, PageTitle, SocialIcon } from "../src/components";
 
 export default function About() {
   return (
     <Container>
       <section className="text-gray-600 body-font ">
-        <div className="text-5xl sm:text-8xl text-gray-900 font-bold title-font mb-2 ">
-          About
-        </div>
+        <PageTitle title="about" />
 
         <div className="flex flex-col sm:flex-row mt-10">
           <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
