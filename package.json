@@ -6,7 +6,8 @@
     "dev": "next dev -p 3001",
     "build": "next build",
     "export": "next export",
-    "start": "next start"
+    "start": "next start",
+    "logs": "git log > ./src/git/logs.mdx"
   },
   "dependencies": {
     "@mdx-js/loader": "^1.6.22",
