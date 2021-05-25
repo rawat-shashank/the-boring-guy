@@ -11,7 +11,9 @@ export const BlogPost = ({ slug, date, title, summary, author }) => {
         <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">
           {title}
         </h2>
-        <p className="leading-relaxed">{summary}</p>
+        <p className="leading-relaxed">
+          {summary.length > 180 ? summary.slice(0, 180) + "..." : summary}
+        </p>
         <Link key={slug} href="/blog/[slug]" as={`/blog/${slug}`}>
           <a className="text-indigo-400 inline-flex items-center mt-4">
             Learn More

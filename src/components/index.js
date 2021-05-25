@@ -4,5 +4,14 @@ import { Footer } from "./Footer";
 import { MDXCompProvider } from "./MDXProvider";
 import { BlogPost } from "./Blogpost";
 import SocialIcon from "./social-icons";
+import { PageTitle } from "./PageTitle";
 
-export { Container, Header, Footer, MDXCompProvider, BlogPost, SocialIcon };
+export {
+  Container,
+  Header,
+  Footer,
+  MDXCompProvider,
+  BlogPost,
+  SocialIcon,
+  PageTitle,
+};
