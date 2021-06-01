@@ -10,18 +10,15 @@
     "logs": "git log > ./src/git/logs.mdx"
   },
   "dependencies": {
-    "@mdx-js/loader": "^1.6.22",
-    "@mdx-js/react": "^1.6.22",
-    "@next/mdx": "^10.2.2",
     "@tailwindcss/typography": "^0.4.0",
+    "autoprefixer": "^10.2.5",
     "gray-matter": "^4.0.3",
     "next": "10.2.2",
     "next-mdx-remote": "^3.0.2",
+    "postcss": "^8.3.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "tailwindcss": "^2.1.2",
-    "autoprefixer": "^10.2.5",
-    "postcss": "^8.3.0"
+    "tailwindcss": "^2.1.2"
   },
   "devDependencies": {}
 }
