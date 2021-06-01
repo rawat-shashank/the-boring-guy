@@ -3,9 +3,9 @@ import { getAllPostSlugs, getPostdata } from "../../src/lib/posts";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
-import { Container, Header } from "../../src/components";
+import { Container, Header, PageTitle } from "../../src/components";
 
-const components = { Container, Header };
+const components = { Container, Header, PageTitle };
 
 export default function Posts({ source, frontMatter }) {
   return (
