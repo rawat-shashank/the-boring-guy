@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import styles from "./Typewriter.module.css";
 
 const CONSTANTS = {
-  DELETING_SPEED: 200,
-  TYPING_SPEED: 450,
+  DELETING_SPEED: 50,
+  TYPING_SPEED: 250,
 };
 
-export const TypeWriter = ({ messages, heading }) => {
+export const TypeWriter = ({ messages }) => {
   const [state, setState] = useState({
     text: "",
     message: "",
@@ -36,7 +36,7 @@ export const TypeWriter = ({ messages, heading }) => {
           ...cs,
           isDeleting: true,
         }));
-      }, 500);
+      }, 1000);
     } else if (state.isDeleting && state.text === "") {
       setState((cs) => ({
         ...cs, // cs means currentState
@@ -65,7 +65,6 @@ export const TypeWriter = ({ messages, heading }) => {
 
   return (
     <h1>
-      {heading}&nbsp;
       <span>{state.text}</span>
       <span className={styles.cursor} />
     </h1>

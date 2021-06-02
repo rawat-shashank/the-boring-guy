@@ -13,8 +13,8 @@ export default function Home({ allPostsData }) {
       <section className="text-gray-600 body-font overflow-hidden ">
         <div className="text-3xl sm:text-5xl font-semibold text-gray-700 py-10">
           {sitemetaData.author}
-          <div className="title-font text-5xl sm:text-8xl font-bold my-">
-            <TypeWriter heading={"I'm a :"} messages={msgs} />
+          <div className="title-font text-5xl sm:text-8xl font-bold my-5">
+            <TypeWriter messages={msgs} />
           </div>
         </div>
         <div className="mx-auto mt-10">
