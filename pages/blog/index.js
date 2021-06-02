@@ -7,7 +7,7 @@ const BlogIndex = ({ allPostsData }) => {
       <section className="text-gray-600 body-font overflow-hidden ">
         <PageTitle title="blog" />
 
-        <div className="mx-auto mt-10">
+        <div className="mx-auto mt-20">
           <div className="py-8 divide-gray-100">
             {allPostsData.map(({ slug, date, title, summary, author }) => (
               <BlogPost
@@ -25,7 +25,9 @@ const BlogIndex = ({ allPostsData }) => {
     </Container>
   );
 };
+
 export default BlogIndex;
+
 export async function getStaticProps() {
   const allPostsData = getSortedPosts();
   return {

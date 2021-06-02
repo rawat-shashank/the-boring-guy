@@ -7,6 +7,7 @@ import SocialIcon from "./social-icons";
 import { PageTitle } from "./PageTitle";
 import { Avatar } from "./Avatar";
 import { BlogSummary } from "./BlogSummary";
+import { TypeWriter } from "./typewriter/Typewriter";
 
 export {
   Container,
@@ -18,4 +19,5 @@ export {
   PageTitle,
   Avatar,
   BlogSummary,
+  TypeWriter,
 };
