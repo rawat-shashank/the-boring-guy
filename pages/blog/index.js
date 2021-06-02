@@ -8,7 +8,7 @@ const BlogIndex = ({ allPostsData }) => {
         <PageTitle title="blog" />
 
         <div className="mx-auto mt-10">
-          <div className="my-8 divide-gray-100">
+          <div className="py-8 divide-gray-100">
             {allPostsData.map(({ slug, date, title, summary, author }) => (
               <BlogPost
                 key={slug}

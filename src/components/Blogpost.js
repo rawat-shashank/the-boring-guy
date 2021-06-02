@@ -3,11 +3,11 @@ import { Avatar } from ".";
 
 export const BlogPost = ({ slug, date, title, summary, author }) => {
   return (
-    <div className="py-4 flex flex-wrap md:flex-nowrap">
-      <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+    <div className="flex flex-wrap md:flex-nowrap">
+      <div className="mb-6 flex flex-col sm:pr-8 sm:w-1/3">
         <Avatar author={author} date={date} />
       </div>
-      <div className="md:flex-grow">
+      <div className="sm:w-2/3  sm:flex-grow sm:pl-8">
         <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">
           {title}
         </h2>
