@@ -15,7 +15,10 @@ export default function Posts({ source, frontMatter }) {
       </Head>
       <Container>
         <section>
-          <PageTitle title={frontMatter.title} />
+          {/* <PageTitle title={frontMatter.title} /> */}
+          <div className="text-left py-5 sm:px-5 text-5xl sm:text-6xl text-gray-900 font-semibold title-font mb-2 capitalize">
+            {frontMatter.title}
+          </div>
           <div className="flex flex-col content-center mt-10 sm:flex-row">
             <div className="sm:w-1/4 sm:pr-8 sm:py-8">
               <Avatar author={frontMatter.author} date={frontMatter.date} />

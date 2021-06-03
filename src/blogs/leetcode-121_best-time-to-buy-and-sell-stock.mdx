@@ -1,0 +1,52 @@
+---
+title: "Leetcode 121 - Best Time to Buy and Sell Stock"
+date: "2021-06-03"
+author: "Shashank Rawat"
+summary: "You are given an array prices where prices[i] is the price of a given stock on the i'th day. You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock. Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0."
+---
+
+**URL - ** [LeetCode 121 - Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+
+### Problem Statement
+
+You are given an array prices where prices[i] is the price of a given stock on the i'th day. You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock. Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+
+### Concept
+
+In this problem we need to find the max profit, which basically means, lower number from left and higher number from right. We will try to manage the lowest number and profit using **Kadane’s** algorithm.
+
+Let’s initialize the number like below
+
+```python
+min_val, profit = float('inf'), 0
+```
+
+min_val is the float(‘inf’) because we are subtracting the min with current value (which gives as cur max vs profit which is max so far).
+
+After this we will loop throughout the list and will try to find the current max and max so far, while maintain the min val.
+
+```python
+for x in prices:
+        profit = max(profit, x - min_val)
+        min_val = min(x, min_val)
+```
+
+which will return the max profit after the loop, making sure we find the solution in one loop.
+
+### Complexity
+
+Time : O(n) - Looping once
+Space: O(2) => O(1) - since we are managing only two variables
+
+### Code
+
+```python
+
+def maxProfit(self, prices: List[int]) -> int:
+    min_val, profit = float('inf'), 0
+    for x in prices:
+        profit = max(profit, x - min_val)
+        min_val = min(x, min_val)
+    return profit
+
+```

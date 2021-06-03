@@ -30,8 +30,9 @@ export const TypeWriter = ({ messages }) => {
   }, [state.isDeleting]);
 
   useEffect(() => {
+    let timer = "";
     if (!state.isDeleting && state.text === state.message) {
-      setTimeout(() => {
+      timer = setTimeout(() => {
         setState((cs) => ({
           ...cs,
           isDeleting: true,
@@ -45,6 +46,7 @@ export const TypeWriter = ({ messages }) => {
         message: getMessage(cs, messages),
       }));
     }
+    return () => clearTimeout(timer);
   }, [state.text, state.message, state.isDeleting, messages]);
 
   function getCurrentText(currentState) {
