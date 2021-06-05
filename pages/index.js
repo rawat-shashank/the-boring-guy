@@ -1,7 +1,7 @@
 import { Container } from "../src/components/Container";
 import { sitemetaData } from "../config";
 import { getSortedPosts } from "../src/lib/posts";
-import { BlogPost, TypeWriter } from "../src/components";
+import { BlogPost, Timeline, TypeWriter } from "../src/components";
 
 export default function Home({ allPostsData }) {
   allPostsData.length = allPostsData.length > 5 ? 5 : allPostsData.length;
@@ -18,10 +18,10 @@ export default function Home({ allPostsData }) {
           </div>
         </div>
         <div className="mx-auto mt-10">
-          <h1 className="title-font text-3xl font-bold mt-4 text-gray-900">
+          <h1 className="title-font text-3xl font-bold my-5 text-gray-900">
             Latest BlogPosts
           </h1>
-          <div className="py-8 divide-gray-100">
+          <div className="py-4 divide-gray-100">
             {allPostsData.map(({ slug, date, title, summary, author }) => (
               <BlogPost
                 key={slug}
@@ -33,6 +33,9 @@ export default function Home({ allPostsData }) {
               />
             ))}
           </div>
+        </div>
+        <div className="mx-auto my-5">
+          <Timeline />
         </div>
       </section>
     </Container>

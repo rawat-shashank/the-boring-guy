@@ -8,6 +8,7 @@ import { PageTitle } from "./PageTitle";
 import { Avatar } from "./Avatar";
 import { BlogSummary } from "./BlogSummary";
 import { TypeWriter } from "./typewriter/Typewriter";
+import { Timeline } from "./timeline/Timeline";
 
 export {
   Container,
@@ -20,4 +21,5 @@ export {
   Avatar,
   BlogSummary,
   TypeWriter,
+  Timeline,
 };
