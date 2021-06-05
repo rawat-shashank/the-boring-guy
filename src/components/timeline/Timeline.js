@@ -6,7 +6,7 @@ export const Timeline = () => {
       <h1 className="title-font text-3xl font-bold my-4 text-gray-900">
         Timeline
       </h1>
-      <div className="divide-y-2 px-14">
+      <div className="divide-y-2 sm:px-14">
         {data &&
           Object.keys(data)
             .sort((a, b) => b - a)
