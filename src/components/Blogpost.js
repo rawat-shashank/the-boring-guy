@@ -16,8 +16,8 @@ export const BlogPost = ({ slug, date, title, summary, author }) => {
         </p>
         <div className="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100">
           <Link key={slug} href="/blog/[slug]" as={`/blog/${slug}`}>
-            <a className="text-indigo-400 inline-flex items-center mt-4">
-              Learn More
+            <a className="text-indigo-800 inline-flex items-center mt-4">
+              Read Blog
               <svg
                 className="w-4 h-4 ml-2"
                 viewBox="0 0 24 24"

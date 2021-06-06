@@ -1,7 +1,7 @@
 export const Avatar = ({ author, date, imgSrc }) => {
   return (
     <section>
-      <a className="inline-flex items-center">
+      <div className="inline-flex items-center">
         {imgSrc ? (
           <img
             alt="blog"
@@ -25,7 +25,7 @@ export const Avatar = ({ author, date, imgSrc }) => {
             <span className="mt-1 text-gray-500 text-sm mb-2">{date}</span>
           </span>
         </span>
-      </a>
+      </div>
     </section>
   );
 };
