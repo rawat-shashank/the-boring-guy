@@ -1,17 +1,19 @@
 import Head from "next/head";
+import Link from "next/link";
 import { getAllPostSlugs, getPostdata } from "../../src/lib/posts";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import { Avatar, Container, Header, PageTitle } from "../../src/components";
 
-const components = { Container, Header, PageTitle };
+const components = { Container, Header, PageTitle, Link };
 
 export default function Posts({ source, frontMatter }) {
   return (
     <>
       <Head>
         <title>{frontMatter.title}</title>
+        <meta name="description" content={frontMatter.title} />
       </Head>
       <Container>
         <section>
@@ -24,7 +26,7 @@ export default function Posts({ source, frontMatter }) {
               <Avatar author={frontMatter.author} date={frontMatter.date} />
             </div>
             <div className="sm:w-3/4 sm:pl-8 sm:py-8 border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-left">
-              <div className="prose max-w-xs sm:max-w-2xl lg:max-w-4xl lg:prose-xl xl:max-w-5xl xl:prose-2xl">
+              <div className="prose mx-auto max-w-xs sm:max-w-2xl lg:max-w-4xl lg:prose-xl xl:max-w-5xl xl:prose-2xl">
                 <MDXRemote {...source} components={components} />
               </div>
             </div>
