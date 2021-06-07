@@ -1,0 +1,53 @@
+---
+title: "Leetcode 217 - Contains Duplicate"
+date: "2021-06-07"
+author: "Shashank Rawat"
+summary: "Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct."
+---
+
+**URL - ** [Contains Duplicate](//leetcode.com/problems/contains-duplicate/)
+
+### Problem Statement
+
+Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+
+### Concept
+
+This question asks to figure out if the array contains a duplicate element. We need to make sure if all elements are distinct or not.
+
+To make sure all elements are distinct, we will need to iterate them once, and while iterating we will save each element in a dictionary. Since key search is O(1) in dictionary, it will make our algorithm to find if any element is duplicated or not
+
+Iteration
+
+```python
+    for x in nums
+```
+
+Search
+
+```python
+    if x in data
+```
+
+If the data is not there in the dictionary, we can add the element into the dictionary. And if the iteration is over without any match, then we have a unique or distinct array.
+
+### Complexity
+
+Time : **O(n)** - As mentioned earlier we will iterate is once in the worst case, which is array is unique or distinct.
+
+Space: **O(n)** - In the worst case we will be storying all the elements as key.
+
+### Code
+
+```python
+
+def containsDuplicate(self, nums) -> bool:
+    data = {}
+    for x in nums:
+        if x in data:
+            return True
+        else:
+            data[x] = x
+    return False
+
+```
