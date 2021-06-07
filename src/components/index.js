@@ -9,6 +9,7 @@ import { Avatar } from "./Avatar";
 import { BlogSummary } from "./BlogSummary";
 import { TypeWriter } from "./typewriter/Typewriter";
 import { Timeline } from "./timeline/Timeline";
+import { SearchBlog } from "./SearchBlog";
 
 export {
   Container,
@@ -22,4 +23,5 @@ export {
   BlogSummary,
   TypeWriter,
   Timeline,
+  SearchBlog,
 };
