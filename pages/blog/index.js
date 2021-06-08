@@ -28,7 +28,7 @@ const BlogIndex = ({ allPostsData }) => {
 
           <div className="mx-auto mt-20">
             <SearchBlog handleSearch={setSearchTerm} />
-            <div className="py-8 divide-gray-100">
+            <div className="py-8 divide-y-2">
               {postsData.map(({ slug, date, title, summary, author }) => (
                 <BlogPost
                   key={slug}
