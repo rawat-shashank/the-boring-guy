@@ -27,7 +27,7 @@ export default function Home({ allPostsData }) {
             <h1 className="title-font text-3xl font-bold my-5 text-gray-900">
               Latest BlogPosts
             </h1>
-            <div className="py-4 divide-gray-100">
+            <div className="py-4 divide-y-2">
               {allPostsData.map(({ slug, date, title, summary, author }) => (
                 <BlogPost
                   key={slug}
