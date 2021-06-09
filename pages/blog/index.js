@@ -23,7 +23,7 @@ const BlogIndex = ({ allPostsData }) => {
         <meta name="description" content="Blog Page" />
       </Head>
       <Container>
-        <section className="text-gray-600 body-font overflow-hidden ">
+        <section className="text-gray-600 dark:text-gray-400 body-font overflow-hidden w-full">
           <PageTitle title="blog" />
 
           <div className="mx-auto mt-20">

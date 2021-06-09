@@ -10,7 +10,7 @@ export default function About() {
         <meta name="description" content="About Page" />
       </Head>
       <Container>
-        <section className="text-gray-600 body-font ">
+        <section className="text-gray-600 dark:text-gray-400 body-font ">
           <PageTitle title="about" />
 
           <div className="flex flex-col sm:flex-row mt-20">
@@ -21,7 +21,7 @@ export default function About() {
                 className="w-36 h-36 rounded-full  inline-flex items-center justify-center"
               />
               <div className="flex flex-col items-center text-center justify-center">
-                <h2 className="title-font text-3xl font-bold mt-4 text-gray-900">
+                <h2 className="title-font text-3xl font-bold mt-4 text-gray-900 dark:text-white">
                   {sitemetaData.author}
                 </h2>
                 <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
@@ -39,7 +39,7 @@ export default function About() {
               </div>
             </div>
             <div className=" sm:w-2/3 sm:pl-8 sm:py-8 border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-left">
-              <h1 className="mt-4 sm:pr-16 text-2xl font-medium title-font text-gray-900">
+              <h1 className="mt-4 sm:pr-16 text-2xl font-medium title-font text-gray-900 dark:text-white">
                 Professionally
               </h1>
               <p className="leading-relaxed text-lg mb-4">
@@ -55,7 +55,7 @@ export default function About() {
                 healthcare, scrum, productivity, personal finance, interactive
                 map-based applications.
               </p>
-              <h1 className="mt-4 sm:pr-16 text-2xl font-medium title-font text-gray-900">
+              <h1 className="mt-4 sm:pr-16 text-2xl font-medium title-font text-gray-900 dark:text-white">
                 Personally
               </h1>
               <p className="leading-relaxed text-lg mb-4">

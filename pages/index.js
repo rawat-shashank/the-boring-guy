@@ -16,15 +16,15 @@ export default function Home({ allPostsData }) {
         <meta name="description" content="Home Page" />
       </Head>
       <Container>
-        <section className="text-gray-600 body-font overflow-hidden ">
-          <div className="text-3xl sm:text-5xl font-semibold text-gray-700 py-10">
+        <section className="text-gray-600 dark:text-gray-400 body-font overflow-hidden ">
+          <div className="text-3xl sm:text-5xl font-semibold text-gray-700 dark:text-gray-200 py-10">
             {sitemetaData.author}
-            <div className="title-font text-5xl sm:text-8xl font-bold my-5">
+            <div className="title-font text-5xl sm:text-8xl font-bold my-5 text-gray-800 dark:text-white">
               <TypeWriter messages={msgs} />
             </div>
           </div>
           <div className="mx-auto mt-10">
-            <h1 className="title-font text-3xl font-bold my-5 text-gray-900">
+            <h1 className="title-font text-3xl font-bold my-5 text-gray-900 dark:text-white">
               Latest BlogPosts
             </h1>
             <div className="py-4 divide-y-2">

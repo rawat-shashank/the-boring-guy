@@ -1,13 +1,14 @@
 import Link from "next/link";
+import { ThemeSwitch } from "..";
 import { sitemetaData } from "../../../config";
 import { headerNavLinks } from "./headerLinks";
 
 export const Header = () => {
   return (
-    <header className="text-gray-600 body-font">
+    <header className="text-gray-600 dark:text-gray-400 body-font">
       <div className="container lg:w-5/6 mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <Link href="/">
-          <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+          <a className="flex title-font font-medium items-center text-gray-900 dark:text-white mb-4 md:mb-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -27,10 +28,13 @@ export const Header = () => {
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
           {headerNavLinks.map((link) => (
             <Link href={link.href} key={link.href}>
-              <a className="mr-5 hover:text-gray-900">{link.title}</a>
+              <a className="mr-5 font-semibold text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-200">
+                {link.title}
+              </a>
             </Link>
           ))}
         </nav>
+        <ThemeSwitch />
       </div>
     </header>
   );

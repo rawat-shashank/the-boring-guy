@@ -10,6 +10,7 @@ import { BlogSummary } from "./BlogSummary";
 import { TypeWriter } from "./typewriter/Typewriter";
 import { Timeline } from "./timeline/Timeline";
 import { SearchBlog } from "./SearchBlog";
+import { ThemeSwitch } from "./ThemeSwitch";
 
 export {
   Container,
@@ -24,4 +25,5 @@ export {
   TypeWriter,
   Timeline,
   SearchBlog,
+  ThemeSwitch,
 };
