@@ -18,11 +18,11 @@ export const Avatar = ({ author, date, imgSrc }) => {
         )}
 
         <span className="flex-grow flex flex-col pl-4">
-          <span className="title-font font-medium text-gray-900 capitalize">
+          <span className="title-font font-medium text-gray-900 dark:text-white capitalize">
             {author}
           </span>
           <span className="text-gray-400 text-xs tracking-widest mt-0.5">
-            <span className="mt-1 text-gray-500 text-sm mb-2">{date}</span>
+            <span className="mt-1 text-sm mb-2">{date}</span>
           </span>
         </span>
       </div>

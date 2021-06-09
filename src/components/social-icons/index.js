@@ -15,7 +15,7 @@ const SocialIcon = ({ kind, href }) => {
 
   return (
     <a
-      className="ml-3 text-gray-500 transition hover:text-gray-700"
+      className="ml-3 text-gray-500 transition hover:text-gray-700 dark:hover:text-white"
       target="_blank"
       rel="noopener noreferrer"
       href={href}

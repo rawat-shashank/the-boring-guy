@@ -1,5 +1,5 @@
 .cursor {
-  border-left: 0.1em solid #000;
+  border-left: 0.1em solid;
   animation: blink 0.7s steps(1) infinite;
 }
 

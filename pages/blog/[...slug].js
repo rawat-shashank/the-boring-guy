@@ -14,8 +14,6 @@ import { Avatar, Container, Header, PageTitle } from "../../src/components";
 const components = { Container, Header, PageTitle, Link };
 
 export default function Posts({ source, frontMatter, prev, next }) {
-  // console.log(prev, next);
-
   return (
     <>
       <Head>
@@ -24,8 +22,7 @@ export default function Posts({ source, frontMatter, prev, next }) {
       </Head>
       <Container>
         <section>
-          {/* <PageTitle title={frontMatter.title} /> */}
-          <div className="text-left py-5 sm:px-5 text-5xl sm:text-6xl text-gray-900 font-semibold title-font mb-2 capitalize">
+          <div className="text-left py-5 sm:px-5 text-5xl sm:text-6xl text-gray-900 dark:text-white font-semibold title-font mb-2 capitalize">
             {frontMatter.title}
           </div>
           <div className="flex flex-col content-center mt-10 sm:flex-row">
@@ -42,7 +39,7 @@ export default function Posts({ source, frontMatter, prev, next }) {
                     </span>
                   </div>
                   <Link href={`/blog/${prev.slug}`} as={`/blog/${prev.slug}`}>
-                    <a className="text-indigo-800 inline-flex items-center">
+                    <a className="font-semibold text-indigo-500 hover:text-indigo-800 dark:hover:text-indigo-400 inline-flex items-center">
                       {prev.title}
                     </a>
                   </Link>
@@ -56,7 +53,7 @@ export default function Posts({ source, frontMatter, prev, next }) {
                     </span>
                   </div>
                   <Link href={`/blog/${next.slug}`} as={`/blog/${next.slug}`}>
-                    <a className="text-indigo-800 inline-flex items-center">
+                    <a className="font-semibold text-indigo-500 hover:text-indigo-800 dark:hover:text-indigo-400 inline-flex items-center">
                       {next.title}
                     </a>
                   </Link>
@@ -64,7 +61,7 @@ export default function Posts({ source, frontMatter, prev, next }) {
               )}
             </div>
             <div className="sm:w-3/4 sm:pl-8 sm:py-8 border-gray-200 sm:border-t-0 border-t mt-4 pt-6 sm:mt-0 text-left">
-              <div className="prose mx-auto max-w-xs sm:max-w-2xl lg:max-w-4xl lg:prose-xl xl:max-w-5xl xl:prose-2xl">
+              <div className="prose dark:prose-dark mx-auto max-w-xs sm:max-w-2xl lg:max-w-4xl lg:prose-xl xl:max-w-5xl xl:prose-2xl">
                 <MDXRemote {...source} components={components} />
               </div>
             </div>
