@@ -8,7 +8,7 @@ module.exports = {
         DEFAULT: {
           css: {
             a: {
-              color: theme("colors.indigo.500"),
+              color: theme("colors.indigo.600"),
               "&:hover": {
                 color: theme("colors.indigo.800"),
               },
@@ -19,9 +19,9 @@ module.exports = {
           css: {
             color: theme("colors.gray.300"),
             a: {
-              color: theme("colors.indigo.500"),
+              color: theme("colors.indigo.400"),
               "&:hover": {
-                color: theme("colors.indigo.400"),
+                color: theme("colors.indigo.200"),
               },
               code: { color: theme("colors.indigo.400") },
             },

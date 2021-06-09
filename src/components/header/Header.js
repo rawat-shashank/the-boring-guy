@@ -28,7 +28,7 @@ export const Header = () => {
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
           {headerNavLinks.map((link) => (
             <Link href={link.href} key={link.href}>
-              <a className="mr-5 hover:text-gray-900 dark:hover:text-white">
+              <a className="mr-5 font-semibold text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-200">
                 {link.title}
               </a>
             </Link>

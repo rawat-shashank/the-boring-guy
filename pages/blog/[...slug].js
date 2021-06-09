@@ -33,13 +33,11 @@ export default function Posts({ source, frontMatter, prev, next }) {
 
               {prev && (
                 <div className="py-6">
-                  <div className="text-gray-400 text-xs tracking-widest mt-0.5">
-                    <span className="mt-1 text-gray-500 text-sm mb-2">
-                      PREVIOUS ARTICLE
-                    </span>
+                  <div className="text-gray-600 dark:text-gray-400 text-xs tracking-widest mt-0.5">
+                    <span className="mt-1 text-sm mb-2">PREVIOUS ARTICLE</span>
                   </div>
                   <Link href={`/blog/${prev.slug}`} as={`/blog/${prev.slug}`}>
-                    <a className="font-semibold text-indigo-500 hover:text-indigo-800 dark:hover:text-indigo-400 inline-flex items-center">
+                    <a className="font-semibold text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-200 inline-flex items-center">
                       {prev.title}
                     </a>
                   </Link>
@@ -47,13 +45,11 @@ export default function Posts({ source, frontMatter, prev, next }) {
               )}
               {next && (
                 <div className="py-6">
-                  <div className="text-gray-400 text-xs tracking-widest mt-0.5">
-                    <span className="mt-1 text-gray-500 text-sm mb-2">
-                      NEXT ARTICLE
-                    </span>
+                  <div className="text-gray-600 dark:text-gray-400 text-xs tracking-widest mt-0.5">
+                    <span className="mt-1 text-sm mb-2">NEXT ARTICLE</span>
                   </div>
                   <Link href={`/blog/${next.slug}`} as={`/blog/${next.slug}`}>
-                    <a className="font-semibold text-indigo-500 hover:text-indigo-800 dark:hover:text-indigo-400 inline-flex items-center">
+                    <a className="font-semibold text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-200 inline-flex items-center">
                       {next.title}
                     </a>
                   </Link>

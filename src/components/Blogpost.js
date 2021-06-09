@@ -18,7 +18,7 @@ export const BlogPost = ({ slug, date, title, summary, author }) => {
         </p>
         <div className="flex items-center flex-wrap ">
           <Link key={slug} href={`/blog/${slug}`} as={`/blog/${slug}`}>
-            <a className="font-semibold text-indigo-500 hover:text-indigo-800 dark:hover:text-indigo-400 inline-flex items-center mt-4">
+            <a className="font-semibold text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-200 inline-flex items-center mt-4">
               Read Blog
               <svg
                 className="w-4 h-4 ml-2"

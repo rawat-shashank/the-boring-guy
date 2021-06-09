@@ -6,7 +6,7 @@ import { Footer, Header } from "../src/components";
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider attribute="class">
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen dark:bg-gray-900">
         <Header />
         <main className="flex-grow">
           <Component {...pageProps} />
