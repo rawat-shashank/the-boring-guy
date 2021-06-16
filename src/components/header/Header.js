@@ -33,8 +33,8 @@ export const Header = () => {
               </a>
             </Link>
           ))}
+          <ThemeSwitch />
         </nav>
-        <ThemeSwitch />
       </div>
     </header>
   );
