@@ -7,7 +7,7 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
-    "logs": "git log > ./src/git/logs.mdx"
+    "logs": "git log --first-parent > ./src/git/logs.mdx"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.4.0",
