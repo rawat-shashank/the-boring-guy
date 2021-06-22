@@ -11,6 +11,7 @@ import { TypeWriter } from "./typewriter/Typewriter";
 import { Timeline } from "./timeline/Timeline";
 import { SearchBlog } from "./SearchBlog";
 import { ThemeSwitch } from "./ThemeSwitch";
+import { Songslist } from "./songs/Songslist";
 
 export {
   Container,
@@ -26,4 +27,5 @@ export {
   Timeline,
   SearchBlog,
   ThemeSwitch,
+  Songslist,
 };

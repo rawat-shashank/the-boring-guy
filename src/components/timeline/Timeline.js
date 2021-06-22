@@ -1,4 +1,4 @@
-import data from "./timeline.json";
+import timeline from "./timeline.json";
 
 export const Timeline = () => {
   return (
@@ -7,8 +7,8 @@ export const Timeline = () => {
         Timeline
       </h1>
       <div className="divide-y-2 sm:px-14">
-        {data &&
-          Object.keys(data)
+        {timeline &&
+          Object.keys(timeline)
             .sort((a, b) => b - a)
             .map((key) => {
               return (
@@ -16,7 +16,7 @@ export const Timeline = () => {
                   <h2 className="text-lg text-gray-900 dark:text-white font-medium title-font py-4">
                     {key}
                   </h2>
-                  {data[key].map((item) => {
+                  {timeline[key].map((item) => {
                     return (
                       <div key={item.title}>
                         <div className="flex items-center  py-1">

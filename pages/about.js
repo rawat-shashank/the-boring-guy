@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { sitemetaData } from "../config";
 import { Container, PageTitle, SocialIcon } from "../src/components";
+import { Timeline } from "../src/components";
 
 export default function About() {
   return (
@@ -66,6 +67,9 @@ export default function About() {
                 doing the same thing I do for living “Coding”.
               </p>
             </div>
+          </div>
+          <div className="mx-auto my-5">
+            <Timeline />
           </div>
         </section>
       </Container>
