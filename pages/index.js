@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Container } from "../src/components/Container";
 import { sitemetaData } from "../config";
 import { getSortedPosts } from "../src/lib/posts";
-import { BlogPost, Timeline, TypeWriter } from "../src/components";
+import { BlogPost, Songslist, TypeWriter } from "../src/components";
 
 export default function Home({ allPostsData }) {
   allPostsData.length = allPostsData.length > 5 ? 5 : allPostsData.length;
@@ -41,7 +41,7 @@ export default function Home({ allPostsData }) {
             </div>
           </div>
           <div className="mx-auto my-5">
-            <Timeline />
+            <Songslist />
           </div>
         </section>
       </Container>
