@@ -7,5 +7,5 @@ export const sitemetaData = {
   email: "shashank17nov@gmail.com",
   github: "https://github.com/rawat-shashank",
   linkedin: "https://www.linkedin.com/in/rawat-shashank",
-  image: "/static/images/dp.png",
+  image: "static/images/dp.png",
 };
