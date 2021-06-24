@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { sitemetaData } from "../config";
 import { Container, PageTitle, SocialIcon } from "../src/components";
-import { Timeline } from "../src/components";
+import { Timeline, Image } from "../src/components";
 
 export default function About() {
   return (
@@ -16,11 +16,18 @@ export default function About() {
 
           <div className="flex flex-col sm:flex-row mt-20">
             <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-              <img
+              <Image
+                src={sitemetaData.image}
+                width="144"
+                height="144"
+                alt="avatar"
+                className="w-36 h-36 rounded-full"
+              />
+              {/* <img
                 src={sitemetaData.image}
                 alt="avatar"
                 className="w-36 h-36 rounded-full  inline-flex items-center justify-center"
-              />
+              /> */}
               <div className="flex flex-col items-center text-center justify-center">
                 <h2 className="title-font text-3xl font-bold mt-4 text-gray-900 dark:text-white">
                   {sitemetaData.author}
