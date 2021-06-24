@@ -1,6 +1,6 @@
 module.exports = {
-  assetPrefix: "/the-boring-guy/",
   basePath: "/the-boring-guy",
+  assetPrefix: "/the-boring-guy/",
   async headers() {
     return [
       {
