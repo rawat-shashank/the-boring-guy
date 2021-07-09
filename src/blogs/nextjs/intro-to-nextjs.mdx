@@ -1,0 +1,73 @@
+---
+title: "Intro to Next.js"
+date: "2021-07-06"
+author: "Shashank Rawat"
+summary: "Next.js is an open-source React front-end development web framework created by Vercel that enables functionality such as server-side rendering and generating static websites for React based web applications."
+---
+
+## What is Next.js
+
+Next.js is an open-source React front-end development web framework created by Vercel that enables functionality such as server-side rendering and generating static websites for React based web applications.
+
+## Why Next.js
+
+Nextjs comes with great support for a lot of things. Few of them are as below.
+
+1.  **Zero config** : Built-in configuration for dev mode, build, eslint, file system routing, public folder, bundling, and many more features.
+2.  Support for Client side rendering, Server side rendering, and Static Site generation.
+3.  Incremental static regeneration.
+4.  Image optimization.
+
+and many more features.
+
+## Installation
+
+Simple way to start with Nextjs project is to use create-next-app.
+
+```bash
+
+npx create-next-app
+or
+yarn create next-app
+
+```
+
+If you want to start with a TypeScript project you can use the `--typescript` flag:
+
+```bash
+
+npx create-next-app --typescript
+or
+yarn create next-app --typescript
+
+```
+
+Check out below for more configuration.
+
+`create-next-app` comes with the following options:
+
+- **--ts, --typescript** - Initialize as a TypeScript project.
+- **-e, --example [name]|[github-url]** - An example to bootstrap the app with. You can use an example name from the [Next.js repo](https://github.com/vercel/next.js/tree/master/examples) or a GitHub URL. The URL can use any branch and/or subdirectory.
+- **--example-path [path-to-example]** - In a rare case, your GitHub URL might contain a branch name with a slash (e.g. bug/fix-1) and the path to the example (e.g. foo/bar). In this case, you must specify the path to the example separately: `--example-path foo/bar`
+- **--use-npm** - Explicitly tell the CLI to bootstrap the app using npm. To bootstrap using yarn we recommend running `yarn create next-app`
+
+## Directory structure and explanation
+
+Default Next.js create below directory structure when you don't use any template or example configuration.
+
+- **public** - directory to keep all your assets.
+- **pages** - directory to create file system routing.
+  - **api** - to keep all your api related information.
+  - **\_app.js** - Next.js uses the `App` component to initialize pages. You can override it and control the page initialization. Which allows you to do amazing things like:
+    - Persisting layout between page changes.
+    - Keeping state when navigating pages.
+    - Custom error handling using `componentDidCatch`.
+    - Inject additional data into pages.
+    - Add global CSS.
+  - **\_documents.js** - This is an optional file. A custom `Document` is commonly used to augment your application's `<html>` and `<body>` tags. This is necessary because Next.js pages skip the definition of the surrounding document's markup.
+- **styles** - to keep your styles.
+  and some more files which includes next config, eslint config, node_modules, package,json and many more.
+
+## Coming soon
+
+In next coming blog we will try to see how can we add storybook, for visual testing of components. This will help us to create components faster as we will we creating them in isolation (meaning no dependencies to match).
