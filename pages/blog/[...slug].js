@@ -9,9 +9,9 @@ import {
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
-import { Avatar, Container, Header, PageTitle } from "../../src/components";
+import { Avatar, Container } from "../../src/components";
 
-const components = { Container, Header, PageTitle, Link };
+const components = {};
 
 export default function Posts({ source, frontMatter, prev, next }) {
   return (
@@ -57,7 +57,7 @@ export default function Posts({ source, frontMatter, prev, next }) {
               )}
             </div>
             <div className="sm:w-3/4 sm:pl-8 sm:py-8 border-gray-200 sm:border-t-0 border-t mt-4 pt-6 sm:mt-0 text-left">
-              <div className="prose dark:prose-dark mx-auto max-w-xs sm:max-w-2xl lg:max-w-4xl lg:prose-xl xl:max-w-5xl xl:prose-2xl">
+              <div className="prose dark:prose-dark mx-auto max-w-xs sm:max-w-2xl lg:max-w-4xl lg:prose-xl xl:max-w-5xl">
                 <MDXRemote {...source} components={components} />
               </div>
             </div>

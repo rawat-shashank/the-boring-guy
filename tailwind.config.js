@@ -13,6 +13,18 @@ module.exports = {
                 color: theme("colors.indigo.800"),
               },
             },
+            code: {
+              backgroundColor: theme("colors.gray.200"),
+              color: "inherit",
+            },
+            "code::before": {
+              content: '""',
+              "padding-left": "0.25rem",
+            },
+            "code::after": {
+              content: '""',
+              "padding-right": "0.25rem",
+            },
           },
         },
         dark: {
@@ -44,6 +56,7 @@ module.exports = {
             },
             code: {
               backgroundColor: theme("colors.gray.800"),
+              color: "inherit",
             },
             hr: { borderColor: theme("colors.gray.700") },
             "ol li:before": {
