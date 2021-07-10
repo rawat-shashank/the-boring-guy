@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ThemeSwitch } from "..";
 import { sitemetaData } from "../../../config";
 import { headerNavLinks } from "./headerLinks";
+import { Logo } from "../Logo";
 
 export const Header = () => {
   return (
@@ -9,18 +10,7 @@ export const Header = () => {
       <div className="container lg:w-4/6 mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <Link href="/">
           <a className="flex title-font font-medium items-center text-gray-900 dark:text-white mb-4 md:mb-0">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
+            <Logo className="w-14 h-14 text-gray-800 dark:text-white" />
             <span className="ml-3 text-xl">{sitemetaData.title}</span>
           </a>
         </Link>
