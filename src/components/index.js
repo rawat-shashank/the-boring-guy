@@ -12,6 +12,7 @@ import { Timeline } from "./timeline/Timeline";
 import { SearchBlog } from "./SearchBlog";
 import { ThemeSwitch } from "./ThemeSwitch";
 import { Songslist } from "./songs/Songslist";
+import { Logo } from "./Logo";
 
 export {
   Container,
@@ -28,4 +29,5 @@ export {
   SearchBlog,
   ThemeSwitch,
   Songslist,
+  Logo,
 };
