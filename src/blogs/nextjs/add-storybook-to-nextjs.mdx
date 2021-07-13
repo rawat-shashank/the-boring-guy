@@ -1,0 +1,46 @@
+---
+title: "Next.js :  Adding Storybook"
+date: "2021-07-13"
+author: "Shashank Rawat"
+summary: "Storybook is a tool for UI development. It makes development faster and easier by isolating components. This allows you to work on one component at a time. You can develop entire UIs without needing to start up a complex dev stack, force certain data into your database, or navigate around your application."
+---
+
+## What's Storybook ? Should you care ?
+
+Official statement from there website.
+
+> Storybook is a tool for UI development. It makes development faster and easier by isolating components. This allows you to work on one component at a time. You can develop entire UIs without needing to start up a complex dev stack, force certain data into your database, or navigate around your application.
+
+But what does it mean for us. We use storybook to create components in isolation meaning, we don't need any dependency while working on UI components.
+While working on UI, most of the time we observe, we might have to be logged in, or fetch some data, load a page where the component is required, or navigate to multi level component, and other similar scenario. These things add unnecessary delay and complexity in component development. While with storybook we can develop the component beforehand and then can be included where it is required. We will see this in action in future updates.
+
+> Storybook helps you **document** components for reuse and automatically **visually test** your components to prevent bugs. Extend Storybook with an ecosystem of **addons** that help you do things like fine-tune responsive layouts or verify accessibility.
+
+## Installation
+
+Installing Storybook is one of the easiest thing to do. If you have followed from the previous blog post. You'll have a bare bones nextjs project setup. If not you can start with below command.
+
+    npx create-next-app <project-name>
+
+and once we have the project setup. We need to run below command to setup storybook.
+
+    npx sb init
+
+This will take care of auto installation and as well as setup of scripts to run storybook in **package.json** file.
+
+    "storybook": "start-storybook -p 6006", "build-storybook":
+    "build-storybook"
+
+to check if it is installed, just run
+
+    npm run storybook
+
+It will start storybook and will open a new tab in browser with storybook on below URL.
+
+> http://localhost:6006/
+
+You'll see, storybook comes with some default component and stories. One of them is **Button**. The corresponding code can be found in your project under a newly added directory/folder **stories**.
+
+## What's Next
+
+We will bring our own stories to the mix. We will change file structure for Nextjs a little bit, and then will introduce new stories and how to use them to build fast and reliable UI. Stay tuned for more.
