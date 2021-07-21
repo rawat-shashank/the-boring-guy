@@ -4,6 +4,7 @@ import styles from "./Typewriter.module.css";
 const CONSTANTS = {
   DELETING_SPEED: 50,
   TYPING_SPEED: 250,
+  DELAY_SPEED: 2500,
 };
 
 export const TypeWriter = ({ messages }) => {
@@ -37,7 +38,7 @@ export const TypeWriter = ({ messages }) => {
           ...cs,
           isDeleting: true,
         }));
-      }, 1000);
+      }, CONSTANTS.DELAY_SPEED);
     } else if (state.isDeleting && state.text === "") {
       setState((cs) => ({
         ...cs, // cs means currentState

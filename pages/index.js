@@ -7,7 +7,7 @@ import { BlogPost, Songslist, TypeWriter } from "../src/components";
 export default function Home({ allPostsData }) {
   allPostsData.length = allPostsData.length > 5 ? 5 : allPostsData.length;
 
-  const msgs = ["Human", "Developer", "Foodie"];
+  const msgs = ["Human", "Developer", "Foodie", "Gamer"];
 
   return (
     <>
@@ -17,9 +17,9 @@ export default function Home({ allPostsData }) {
       </Head>
       <Container>
         <section className="text-gray-600 dark:text-gray-400 body-font overflow-hidden ">
-          <div className="text-3xl sm:text-5xl font-semibold text-gray-700 dark:text-gray-200 py-10">
+          <div className="text-3xl sm:text-5xl font-semibold text-gray-700 dark:text-gray-200 py-10 sm:pt-24 sm:pb-40">
             {sitemetaData.author}
-            <div className="title-font text-5xl sm:text-8xl font-bold my-5 text-gray-800 dark:text-white">
+            <div className="title-font text-5xl sm:text-8xl font-bold my-5 text-gray-800 dark:text-white sm:pt-16">
               <TypeWriter messages={msgs} />
             </div>
           </div>
