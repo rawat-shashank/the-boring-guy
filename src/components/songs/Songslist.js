@@ -20,30 +20,30 @@ export const Songslist = () => {
                   <div className="flex flex-wrap -m-4">
                     {songs[key].map(({ title, url, id, channel }) => {
                       return (
-                        <Link href={url} key={url}>
-                          <a
-                            className="p-2 sm:w-1/2 w-full"
-                            key={title}
-                            target="_blank"
-                            rel="noopener"
-                          >
-                            <div className="bg-gray-100 dark:bg-gray-800 rounded flex p-4 h-full items-start">
-                              <img
-                                src={`https://img.youtube.com/vi/${id}/mqdefault.jpg`}
-                                height="80"
-                                width="160"
-                                className="flex-shrink-0 mr-4"
-                              />
-                              <div className="h-full">
-                                <span className="title-font font-medium dark:text-white">
-                                  {title}
-                                </span>
-                                <p className="leading-relaxed text-base">
-                                  {channel}
-                                </p>
-                              </div>
+                        <Link
+                          href={url}
+                          key={url}
+                          className="p-2 sm:w-1/2 w-full"
+                          key={title}
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <div className="bg-gray-100 dark:bg-gray-800 rounded flex p-4 h-full items-start">
+                            <img
+                              src={`https://img.youtube.com/vi/${id}/mqdefault.jpg`}
+                              height="80"
+                              width="160"
+                              className="flex-shrink-0 mr-4"
+                            />
+                            <div className="h-full">
+                              <span className="title-font font-medium dark:text-white">
+                                {title}
+                              </span>
+                              <p className="leading-relaxed text-base">
+                                {channel}
+                              </p>
                             </div>
-                          </a>
+                          </div>
                         </Link>
                       );
                     })}
