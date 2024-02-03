@@ -20,24 +20,34 @@ While working on UI, most of the time we observe, we might have to be logged in,
 
 Installing Storybook is one of the easiest thing to do. If you have followed from the previous blog post. You'll have a bare bones nextjs project setup. If not you can start with below command.
 
+```bash
     npx create-next-app <project-name>
+```
 
 and once we have the project setup. We need to run below command to setup storybook.
 
+```bash
     npx sb init
+```
 
 This will take care of auto installation and as well as setup of scripts to run storybook in **package.json** file.
 
+```bash
     "storybook": "start-storybook -p 6006", "build-storybook":
     "build-storybook"
+```
 
 to check if it is installed, just run
 
+```bash
     npm run storybook
+```
 
 It will start storybook and will open a new tab in browser with storybook on below URL.
 
+```bash
 > http://localhost:6006/
+```
 
 You'll see, storybook comes with some default component and stories. One of them is **Button**. The corresponding code can be found in your project under a newly added directory/folder **stories**.
 
