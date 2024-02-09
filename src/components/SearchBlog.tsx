@@ -1,4 +1,4 @@
-export const SearchBlog = ({ handleSearch }) => {
+export const SearchBlog = ({ handleSearch }: { handleSearch: Function }) => {
   return (
     <div className="relative max-w-lg">
       <input

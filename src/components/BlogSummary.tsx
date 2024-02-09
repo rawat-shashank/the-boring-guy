@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const BlogSummary = ({ blogs }) => {
   console.log(blogs);
 
@@ -36,7 +38,7 @@ export const BlogSummary = ({ blogs }) => {
                   jianbing microdosing tousled waistcoat.
                 </p>
                 <a className="inline-flex items-center">
-                  <img
+                  <Image
                     alt="blog"
                     src="https://dummyimage.com/103x103"
                     className="
@@ -87,7 +89,7 @@ export const BlogSummary = ({ blogs }) => {
                   jianbing microdosing tousled waistcoat.
                 </p>
                 <a className="inline-flex items-center">
-                  <img
+                  <Image
                     alt="blog"
                     src="https://dummyimage.com/102x102"
                     className="
@@ -138,7 +140,7 @@ export const BlogSummary = ({ blogs }) => {
                   jianbing microdosing tousled waistcoat.
                 </p>
                 <a className="inline-flex items-center">
-                  <img
+                  <Image
                     alt="blog"
                     src="https://dummyimage.com/101x101"
                     className="

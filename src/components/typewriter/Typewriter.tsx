@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState } from "react";
 import styles from "./Typewriter.module.css";
 
@@ -17,7 +18,7 @@ export const TypeWriter = ({ messages }) => {
   });
 
   useEffect(() => {
-    let timer = "";
+    let timer: string | number | ReturnType<typeof setTimeout> = "";
     const handleType = () => {
       setState((cs) => ({
         ...cs, // cs means currentState
@@ -28,10 +29,10 @@ export const TypeWriter = ({ messages }) => {
     };
     handleType();
     return () => clearTimeout(timer);
-  }, [state.isDeleting]);
+  }, [state.isDeleting, state.typingSpeed]);
 
   useEffect(() => {
-    let timer = "";
+    let timer: string | number | ReturnType<typeof setTimeout> = "";
     if (!state.isDeleting && state.text === state.message) {
       timer = setTimeout(() => {
         setState((cs) => ({
