@@ -19,7 +19,11 @@ export const getSortedPosts = () => {
     const fileContents = fs.readFileSync(file, "utf8");
     const { data } = matter(fileContents);
 
-    const options = { month: "long", day: "numeric", year: "numeric" };
+    const options: Intl.DateTimeFormatOptions = {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    };
     const formattedDate = new Date(data.date).toLocaleDateString(
       "en-IN",
       options
@@ -70,6 +74,7 @@ export function getFiles() {
   );
 }
 
-export function formatSlug(slug) {
-  return slug.replace(/\.(mdx|md)/, "");
+export function formatSlug(slug: string): string {
+  const regex = /\.?(mdx|md)$/;
+  return slug.replace(regex, "");
 }
