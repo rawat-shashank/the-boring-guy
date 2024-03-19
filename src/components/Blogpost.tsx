@@ -1,7 +1,14 @@
 import Link from "next/link";
 import { Avatar } from ".";
+import { Blog } from "../lib/posts";
 
-export const BlogPost = ({ slug, date, title, summary, author }) => {
+export const BlogPost = ({
+  slug,
+  date,
+  title,
+  summary,
+  author,
+}: Blog): JSX.Element => {
   return (
     <div className="flex flex-wrap md:flex-nowrap py-12">
       <div className="mb-6 flex flex-col sm:pr-8 sm:w-1/3">
@@ -10,8 +17,8 @@ export const BlogPost = ({ slug, date, title, summary, author }) => {
       <div className="sm:w-2/3  sm:flex-grow sm:pl-8">
         <Link
           key={slug}
-          href={`/blog/${slug}`}
-          as={`/blog/${slug}`}
+          href={`/blogs/${slug}`}
+          as={`/blogs/${slug}`}
           className="text-2xl font-medium text-gray-900 dark:text-white title-font mb-2"
         >
           {title}
@@ -22,8 +29,8 @@ export const BlogPost = ({ slug, date, title, summary, author }) => {
         <div className="flex items-center flex-wrap ">
           <Link
             key={slug}
-            href={`/blog/${slug}`}
-            as={`/blog/${slug}`}
+            href={`/blogs/${slug}`}
+            as={`/blogs/${slug}`}
             className="font-semibold text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-200 inline-flex items-center mt-4"
           >
             Read Blog

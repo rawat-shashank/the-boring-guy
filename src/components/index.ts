@@ -1,33 +1,33 @@
 import { Container } from "./Container";
 import { Header } from "./header/Header";
 import { Footer } from "./Footer";
-import { MDXCompProvider } from "./MDXProvider";
+// import { MDXCompProvider } from "./MDXProvider";
 import { BlogPost } from "./Blogpost";
 import SocialIcon from "./social-icons";
 import { PageTitle } from "./PageTitle";
 import { Avatar } from "./Avatar";
-import { BlogSummary } from "./BlogSummary";
+// import { BlogSummary } from "./BlogSummary";
 import { TypeWriter } from "./typewriter/Typewriter";
 import { Timeline } from "./timeline/Timeline";
-import { SearchBlog } from "./SearchBlog";
+// import { SearchBlog } from "./SearchBlog";
 import { ThemeSwitch } from "./ThemeSwitch";
-import { Songslist } from "./songs/Songslist";
-import { Logo } from "./Logo";
+import { SongsList } from "./songs/SongsList";
+// import { Logo } from "./Logo";
 
 export {
   Container,
   Header,
   Footer,
-  MDXCompProvider,
+  // MDXCompProvider,
   BlogPost,
   SocialIcon,
   PageTitle,
   Avatar,
-  BlogSummary,
+  // BlogSummary,
   TypeWriter,
   Timeline,
-  SearchBlog,
+  // SearchBlog,
   ThemeSwitch,
-  Songslist,
-  Logo,
+  SongsList,
+  // Logo,
 };

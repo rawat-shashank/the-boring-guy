@@ -9,6 +9,7 @@
 - [x] Add Search in blogs
 - [x] Add sub dir in blogs folder
 - [x] Toggle dark theme options
+- [ ] Move codebase to typescript,
 - [ ] refactor, try moving things to config file
 - [ ] Add projects page
 - [ ] Git commits page

@@ -1,6 +1,6 @@
-export const BlogSummary = ({ blogs }) => {
-  console.log(blogs);
+import Image from "next/image";
 
+export const BlogSummary = ({ blogs }): JSX.Element => {
   return (
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
@@ -36,7 +36,7 @@ export const BlogSummary = ({ blogs }) => {
                   jianbing microdosing tousled waistcoat.
                 </p>
                 <a className="inline-flex items-center">
-                  <img
+                  <Image
                     alt="blog"
                     src="https://dummyimage.com/103x103"
                     className="
@@ -87,7 +87,7 @@ export const BlogSummary = ({ blogs }) => {
                   jianbing microdosing tousled waistcoat.
                 </p>
                 <a className="inline-flex items-center">
-                  <img
+                  <Image
                     alt="blog"
                     src="https://dummyimage.com/102x102"
                     className="
@@ -138,7 +138,7 @@ export const BlogSummary = ({ blogs }) => {
                   jianbing microdosing tousled waistcoat.
                 </p>
                 <a className="inline-flex items-center">
-                  <img
+                  <Image
                     alt="blog"
                     src="https://dummyimage.com/101x101"
                     className="

@@ -1,9 +1,17 @@
-export const Avatar = ({ author, date, imgSrc }) => {
+import Image from "next/image";
+
+export type AvatarProps = {
+  author: string;
+  date: Date;
+  imgSrc: string;
+};
+
+export const Avatar = ({ author, date, imgSrc = "" }): JSX.Element => {
   return (
     <section>
       <div className="inline-flex items-center text-gray-600 dark:text-gray-400">
         {imgSrc ? (
-          <img
+          <Image
             alt="blog"
             src={imgSrc}
             className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"

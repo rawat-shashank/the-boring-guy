@@ -1,7 +1,14 @@
-import songs from "./songs.json";
+import Image from "next/image";
 import Link from "next/link";
 
-export const Songslist = () => {
+export type SongsListProps = {
+  title: string;
+  url: string;
+  id: string;
+  channel: string;
+};
+
+export const SongsList = ({ songs }): JSX.Element => {
   return (
     <div>
       <h1 className="title-font text-3xl font-bold my-4 text-gray-900 dark:text-white">
@@ -10,7 +17,7 @@ export const Songslist = () => {
       <div className="divide-y-2 sm:px-4">
         {songs &&
           Object.keys(songs)
-            .sort((a, b) => b - a)
+            .sort((a: any, b: any) => b - a)
             .map((key) => {
               return (
                 <div key={key} className="my-8">
@@ -24,16 +31,16 @@ export const Songslist = () => {
                           href={url}
                           key={url}
                           className="p-2 sm:w-1/2 w-full"
-                          key={title}
                           target="_blank"
                           rel="noopener"
                         >
                           <div className="bg-gray-100 dark:bg-gray-800 rounded flex p-4 h-full items-start">
-                            <img
+                            <Image
                               src={`https://img.youtube.com/vi/${id}/mqdefault.jpg`}
                               height="80"
                               width="160"
                               className="flex-shrink-0 mr-4"
+                              alt="no image found"
                             />
                             <div className="h-full">
                               <span className="title-font font-medium dark:text-white">
