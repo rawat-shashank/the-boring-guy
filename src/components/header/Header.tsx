@@ -1,10 +1,9 @@
 import Link from "next/link";
 import { ThemeSwitch } from "..";
-import { sitemetaData } from "../../../config";
-import { headerNavLinks } from "./headerLinks";
+import { siteMetaData, HEADER_NAV_LINKS } from "../../constants/config";
 import { Logo } from "../Logo";
 
-export const Header = () => {
+export const Header = (): JSX.Element => {
   return (
     <header className="text-gray-600 dark:text-gray-400 body-font">
       <div className="container lg:w-4/6 mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -13,11 +12,11 @@ export const Header = () => {
           className="flex title-font font-medium items-center text-gray-900 dark:text-white mb-4 md:mb-0"
         >
           <Logo className="w-14 h-14 text-gray-800 dark:text-white" />
-          <span className="ml-3 text-xl">{sitemetaData.title}</span>
+          <span className="ml-3 text-xl">{siteMetaData.title}</span>
         </Link>
 
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          {headerNavLinks.map((link) => (
+          {HEADER_NAV_LINKS.map((link) => (
             <Link
               href={link.href}
               key={link.href}

@@ -1,20 +1,19 @@
 "use client";
 import { useEffect, useState } from "react";
 import styles from "./Typewriter.module.css";
+import { TYPE_WRITER } from "../../constants/config";
 
-const CONSTANTS = {
-  DELETING_SPEED: 50,
-  TYPING_SPEED: 250,
-  DELAY_SPEED: 2500,
-};
-
-export const TypeWriter = ({ messages }) => {
+export const TypeWriter = ({
+  messages,
+}: {
+  messages: string[];
+}): JSX.Element => {
   const [state, setState] = useState({
     text: "",
     message: "",
     isDeleting: false,
     loopNum: 0,
-    typingSpeed: CONSTANTS.TYPING_SPEED,
+    typingSpeed: TYPE_WRITER.TYPING_SPEED,
   });
 
   useEffect(() => {
@@ -39,7 +38,7 @@ export const TypeWriter = ({ messages }) => {
           ...cs,
           isDeleting: true,
         }));
-      }, CONSTANTS.DELAY_SPEED);
+      }, TYPE_WRITER.DELAY_SPEED);
     } else if (state.isDeleting && state.text === "") {
       setState((cs) => ({
         ...cs, // cs means currentState
@@ -63,8 +62,8 @@ export const TypeWriter = ({ messages }) => {
 
   function getTypingSpeed(currentState) {
     return currentState.isDeleting
-      ? CONSTANTS.TYPING_SPEED
-      : CONSTANTS.DELETING_SPEED;
+      ? TYPE_WRITER.TYPING_SPEED
+      : TYPE_WRITER.DELETING_SPEED;
   }
 
   return (

@@ -1,6 +1,12 @@
 import Image from "next/image";
 
-export const Avatar = ({ author, date, imgSrc="" }) => {
+export type AvatarProps = {
+  author: string;
+  date: Date;
+  imgSrc: string;
+};
+
+export const Avatar = ({ author, date, imgSrc = "" }): JSX.Element => {
   return (
     <section>
       <div className="inline-flex items-center text-gray-600 dark:text-gray-400">

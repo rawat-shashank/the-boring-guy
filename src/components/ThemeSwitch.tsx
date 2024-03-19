@@ -1,8 +1,8 @@
-"use client"
+"use client";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
-export const ThemeSwitch = () => {
+export const ThemeSwitch = (): JSX.Element => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme, resolvedTheme } = useTheme();
 

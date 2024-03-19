@@ -1,6 +1,15 @@
-import timeline from "./timeline.json";
+export type TimelineProps = {
+  [year: string]: {
+    title: string;
+    text: string;
+  }[];
+};
 
-export const Timeline = () => {
+export const Timeline = ({
+  timeline,
+}: {
+  timeline: TimelineProps;
+}): JSX.Element => {
   return (
     <div>
       <h1 className="title-font text-3xl font-bold my-4 text-gray-900 dark:text-white">
@@ -9,7 +18,7 @@ export const Timeline = () => {
       <div className="divide-y-2 sm:px-14">
         {timeline &&
           Object.keys(timeline)
-            .sort((a, b) => b - a)
+            .sort((a, b) => b.localeCompare(a))
             .map((key) => {
               return (
                 <div key={key} className="my-8">

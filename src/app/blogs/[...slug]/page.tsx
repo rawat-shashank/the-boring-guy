@@ -2,23 +2,29 @@ import matter from "gray-matter";
 import {
   formatSlug,
   getFiles,
-  getPostdata,
+  getPostData,
   getSortedPosts,
 } from "../../../lib/posts";
 import { Avatar, Container } from "../../../components";
 import Link from "next/link";
 import { MDXWrapper } from "./MDXWrapper";
-import { serialize } from 'next-mdx-remote/serialize'
+import { serialize } from "next-mdx-remote/serialize";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description: "Blogs detailing page",
+};
 
 export async function generateStaticParams() {
-  const posts = getFiles();
+  const posts = await getFiles();
   return posts.map((p) => ({
     slug: formatSlug(p).split("/"),
   }));
 }
 
-export async function getBlog(slug: string[]) {
-  const allPosts = getSortedPosts();
+async function getBlog(slug: string[]) {
+  const allPosts = await getSortedPosts();
   const postIndex = allPosts.findIndex(
     (el) => formatSlug(el.slug) === slug.join("/")
   );
@@ -26,7 +32,7 @@ export async function getBlog(slug: string[]) {
   const prev = allPosts[postIndex + 1] || null;
   const next = allPosts[postIndex - 1] || null;
 
-  const postContent = await getPostdata(slug.join("/"));
+  const postContent = await getPostData(slug.join("/"));
   const { data, content } = matter(postContent);
   const mdxSource = await serialize(content);
 

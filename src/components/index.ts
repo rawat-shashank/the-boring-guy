@@ -11,7 +11,7 @@ import { TypeWriter } from "./typewriter/Typewriter";
 import { Timeline } from "./timeline/Timeline";
 // import { SearchBlog } from "./SearchBlog";
 import { ThemeSwitch } from "./ThemeSwitch";
-// import { Songslist } from "./songs/Songslist";
+import { SongsList } from "./songs/SongsList";
 // import { Logo } from "./Logo";
 
 export {
@@ -28,6 +28,6 @@ export {
   Timeline,
   // SearchBlog,
   ThemeSwitch,
-  // Songslist,
+  SongsList,
   // Logo,
 };

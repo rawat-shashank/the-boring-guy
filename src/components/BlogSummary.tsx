@@ -1,8 +1,6 @@
 import Image from "next/image";
 
-export const BlogSummary = ({ blogs }) => {
-  console.log(blogs);
-
+export const BlogSummary = ({ blogs }): JSX.Element => {
   return (
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">

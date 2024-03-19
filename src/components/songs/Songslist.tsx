@@ -1,8 +1,14 @@
 import Image from "next/image";
-import songs from "./songs.json";
 import Link from "next/link";
 
-export const Songslist = () => {
+export type SongsListProps = {
+  title: string;
+  url: string;
+  id: string;
+  channel: string;
+};
+
+export const SongsList = ({ songs }): JSX.Element => {
   return (
     <div>
       <h1 className="title-font text-3xl font-bold my-4 text-gray-900 dark:text-white">
@@ -11,7 +17,7 @@ export const Songslist = () => {
       <div className="divide-y-2 sm:px-4">
         {songs &&
           Object.keys(songs)
-            .sort((a:any, b:any) => b - a)
+            .sort((a: any, b: any) => b - a)
             .map((key) => {
               return (
                 <div key={key} className="my-8">

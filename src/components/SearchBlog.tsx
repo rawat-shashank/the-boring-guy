@@ -1,4 +1,8 @@
-export const SearchBlog = ({ handleSearch }: { handleSearch: Function }) => {
+export const SearchBlog = ({
+  handleSearch,
+}: {
+  handleSearch: Function;
+}): JSX.Element => {
   return (
     <div className="relative max-w-lg">
       <input

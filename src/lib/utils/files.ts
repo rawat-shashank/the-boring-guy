@@ -1,32 +1,28 @@
-import fs from "fs";
-import path from "path";
+import { promises as fs } from "fs";
+import { resolve } from "path";
 
-const pipe =
-  (...fns) =>
-  (x) =>
-    fns.reduce((v, f) => f(v), x);
+/**
+ * Recursively walks through a directory structure and returns an array of all filenames within the directory and its subdirectories.
+ *
+ * @param folder - The path to the directory to walk.
+ * @returns A Promise that resolves to an array of all filenames within the directory and its subdirectories.
+ */
+const getAllFilesRecursively = async (folder: string): Promise<string[]> => {
+  const fullPath = resolve(folder); // Ensure absolute path for consistency
+  const files = await fs.readdir(fullPath);
 
-const flattenArray = (input) =>
-  input.reduce(
-    (acc, item) => [...acc, ...(Array.isArray(item) ? item : [item])],
-    []
-  );
-
-const map = (fn) => (input) => input.map(fn);
-
-const walkDir = (fullPath) => {
-  return fs.statSync(fullPath).isFile()
-    ? fullPath
-    : getAllFilesRecursively(fullPath);
+  const filePaths: string[] = [];
+  for (const file of files) {
+    const filePath = resolve(fullPath, file);
+    const isFile = await fs.stat(filePath).then((stats) => stats.isFile());
+    if (isFile) {
+      filePaths.push(filePath);
+    } else {
+      const subdirectoryFiles = await getAllFilesRecursively(filePath);
+      filePaths.push(...subdirectoryFiles); // Spread syntax for efficient concatenation
+    }
+  }
+  return filePaths;
 };
-
-const pathJoinPrefix = (prefix) => (extraPath) => path.join(prefix, extraPath);
-
-const getAllFilesRecursively = (folder) =>
-  pipe(
-    fs.readdirSync,
-    map(pipe(pathJoinPrefix(folder), walkDir)),
-    flattenArray
-  )(folder);
 
 export default getAllFilesRecursively;

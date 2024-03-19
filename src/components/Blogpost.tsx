@@ -1,7 +1,14 @@
 import Link from "next/link";
 import { Avatar } from ".";
+import { Blog } from "../lib/posts";
 
-export const BlogPost = ({ slug, date, title, summary, author }) => {
+export const BlogPost = ({
+  slug,
+  date,
+  title,
+  summary,
+  author,
+}: Blog): JSX.Element => {
   return (
     <div className="flex flex-wrap md:flex-nowrap py-12">
       <div className="mb-6 flex flex-col sm:pr-8 sm:w-1/3">

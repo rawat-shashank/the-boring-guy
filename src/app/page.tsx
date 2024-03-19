@@ -1,11 +1,6 @@
-import { Metadata } from "next";
-import { BlogPost, Container, TypeWriter } from "../components";
-import { sitemetaData } from "../../config";
+import { BlogPost, Container, SongsList, TypeWriter } from "../components";
+import { SONGS_LIST, TYPE_WRITER, siteMetaData } from "../constants/config";
 import { getSortedPosts } from "../lib/posts";
-
-export const metadata: Metadata = {
-  title: "My Page Title",
-};
 
 async function getProjects() {
   const allPostsData = await getSortedPosts();
@@ -15,15 +10,13 @@ async function getProjects() {
 export default async function Page() {
   const allPostsData = await getProjects();
 
-  const msgs = ["Human", "Developer", "Foodie", "Gamer"];
-
   return (
     <Container>
       <section className="text-gray-600 dark:text-gray-400 body-font overflow-hidden ">
         <div className="text-3xl sm:text-5xl font-semibold text-gray-700 dark:text-gray-200 py-10 sm:pt-24 sm:pb-40">
-          {sitemetaData.author}
+          {siteMetaData.author}
           <div className="title-font text-5xl sm:text-8xl font-bold my-5 text-gray-800 dark:text-white sm:pt-16">
-            <TypeWriter messages={msgs} />
+            <TypeWriter messages={TYPE_WRITER.MESSAGES} />
           </div>
         </div>
         <div className="mx-auto mt-10">
@@ -43,9 +36,9 @@ export default async function Page() {
             ))}
           </div>
         </div>
-        {/* <div className="mx-auto my-5">
-          <Songslist />
-        </div> */}
+        <div className="mx-auto my-5">
+          <SongsList songs={SONGS_LIST} />
+        </div>
       </section>
     </Container>
   );
