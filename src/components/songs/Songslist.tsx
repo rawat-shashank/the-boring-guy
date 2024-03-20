@@ -2,13 +2,19 @@ import Image from "next/image";
 import Link from "next/link";
 
 export type SongsListProps = {
-  title: string;
-  url: string;
-  id: string;
-  channel: string;
+  [year: string]: {
+    title: string;
+    url: string;
+    id: string;
+    channel: string;
+  }[];
 };
 
-export const SongsList = ({ songs }): JSX.Element => {
+export const SongsList = ({
+  songs,
+}: {
+  songs: SongsListProps;
+}): JSX.Element => {
   return (
     <div>
       <h1 className="title-font text-3xl font-bold my-4 text-gray-900 dark:text-white">

@@ -2,7 +2,7 @@ import { Container } from "./Container";
 import { Header } from "./header/Header";
 import { Footer } from "./Footer";
 // import { MDXCompProvider } from "./MDXProvider";
-import { BlogPost } from "./Blogpost";
+import { BlogPost } from "./BlogPost";
 import SocialIcon from "./social-icons";
 import { PageTitle } from "./PageTitle";
 import { Avatar } from "./Avatar";
