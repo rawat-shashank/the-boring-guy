@@ -2,7 +2,7 @@ import { Container } from "./Container";
 import { Header } from "./header/Header";
 import { Footer } from "./Footer";
 // import { MDXCompProvider } from "./MDXProvider";
-import { BlogPost } from "./BlogPost";
+import { BlogPost } from "./blog-post";
 import SocialIcon from "./social-icons";
 import { PageTitle } from "./PageTitle";
 import { Avatar } from "./Avatar";
@@ -11,7 +11,7 @@ import { TypeWriter } from "./typewriter/Typewriter";
 import { Timeline } from "./timeline/Timeline";
 // import { SearchBlog } from "./SearchBlog";
 import { ThemeSwitch } from "./ThemeSwitch";
-import { SongsList } from "./songs/SongsList";
+import { SongsList } from "./songs/songs-list";
 // import { Logo } from "./Logo";
 
 export {
